@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config}*/
 const config = {
-  content: ["./src/**/*.{html,js,svelte,ts}"],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 
-  theme: {
-    extend: {}
-  },
+	theme: {
+		extend: {}
+	},
 
-  plugins: []
+	plugins: [require('daisyui'), require('@tailwindcss/typography')],
+
+	daisyui: {
+		themes: ['night']
+	}
 };
 
 module.exports = config;
