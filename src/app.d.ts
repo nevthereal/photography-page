@@ -8,6 +8,13 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+	interface PostData {
+		title: string;
+		createdAt: string;
+		author: 'Neville Brem';
+		slug: string;
+		description: string;
+	}
 }
 
 export {};

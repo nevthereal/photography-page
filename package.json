@@ -42,6 +42,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.10"
+    "@tailwindcss/typography": "^0.5.10",
+    "mdsvex": "^0.11.0"
   }
 }
