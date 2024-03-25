@@ -1,0 +1,28 @@
+---
+import { Cloudinary } from "@cloudinary/url-gen";
+import { Image } from "astro:assets";
+
+interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+
+export const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dvgm3oo5q",
+  },
+});
+
+let cldSrc = cld.image(src).format("auto");
+---
+
+<Image
+  class:list={"flex my-auto"}
+  src={cldSrc.toURL()}
+  alt='Astro Cloudinary Image'
+  width={500}
+  height={500}
+  loading={"lazy"}
+  quality={"low"}
+/>
