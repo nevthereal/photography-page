@@ -4,9 +4,10 @@ import { Image } from "astro:assets";
 
 interface Props {
   src: string;
+  date: Date;
 }
 
-const { src } = Astro.props;
+const { src, date } = Astro.props;
 
 export const cld = new Cloudinary({
   cloud: {
@@ -17,12 +18,15 @@ export const cld = new Cloudinary({
 let cldSrc = cld.image(src).format("auto");
 ---
 
-<Image
-  class:list={"flex my-auto"}
-  src={cldSrc.toURL()}
-  alt='Astro Cloudinary Image'
-  width={500}
-  height={500}
-  loading={"lazy"}
-  quality={"low"}
-/>
+<div class='flex'>
+  <Image
+    class:list={"flex my-auto"}
+    src={cldSrc.toURL()}
+    alt='Image'
+    width={500}
+    height={500}
+    loading={"eager"}
+    quality={"low"}
+  />
+  <p>{date.toLocaleDateString([], {})}</p>
+</div>
