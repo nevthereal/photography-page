@@ -1,45 +1,24 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import CldImage from "@components/CldImage.astro";
-interface Image {
-  link: string;
-  recDate: Date;
-}
+import { Image } from "astro:assets";
 
-const images: Image[] = [
-  {
-    link: "vlc7cncyr2brxfkbxkj6",
-    recDate: new Date("2024-01-04"),
-  },
-  {
-    link: "yspf6lo5kadzfrmuobgn",
-    recDate: new Date("2024-01-04"),
-  },
-  {
-    link: "gks7wjqoxtzecihky3km",
-    recDate: new Date("2023-12-02"),
-  },
-  {
-    link: "mcye8api61iaxfu1gx1j",
-    recDate: new Date("2023-12-02"),
-  },
-  {
-    link: "gkll2lkljuawturkx6ln",
-    recDate: new Date("2023-12-02"),
-  },
-  {
-    link: "ubtloiaqnnxkmb7sllh6",
-    recDate: new Date("2024-01-20"),
-  },
-];
+const images = await Astro.glob("../assets/gallery/*.jpg");
 ---
 
 <BaseLayout title='Gallery'>
   <h1 class='text-4xl mb-8'>Some favorites stay on my mind forever</h1>
-  <div class='flex gap-8 flex-col'>
+  <div class='flex flex-col md:grid md:grid-cols-2 gap-4'>
     {
-      images.forEach((image) => {
-        return <CldImage src={image.link} date={image.recDate} />;
+      images.map((img) => {
+        return (
+          <Image
+            class='my-auto'
+            src={img.default}
+            alt='gallery image'
+            quality='75'
+            loading='lazy'
+          />
+        );
       })
     }
   </div>
