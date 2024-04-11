@@ -1,12 +1,16 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import banner from "@assets/hero.jpg";
+import { getImage } from "astro:assets";
+
+const bannerConverted = await getImage({ src: banner });
 ---
 
 <BaseLayout title='Home'>
   <main>
     <div
-      id='hero'
-      class='rounded-lg flex h-[40dvh] w-full flex-col justify-between p-16'
+      style={`background-image: url('${bannerConverted.src}')`}
+      class='rounded-lg flex h-[40dvh] w-full flex-col justify-between p-16 bg-cover bg-center'
     >
       <div>
         <h1 class='text-5xl font-black'>I like to take pictures</h1>
@@ -14,12 +18,5 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
       <a href='/gallery' class='btn btn-primary mx-auto'>Explore the gallery</a>
     </div>
-    <style>
-      #hero {
-        background-image: url("../assets/hero.jpg");
-        background-size: cover;
-        background-position: center;
-      }
-    </style>
   </main>
 </BaseLayout>

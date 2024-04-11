@@ -2,7 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 
-const images = await Astro.glob("../assets/gallery/*.jpg");
+const images = await Astro.glob("@assets/gallery/*.jpg");
 ---
 
 <BaseLayout title='Gallery'>
