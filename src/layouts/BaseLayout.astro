@@ -8,7 +8,6 @@ interface Props {
 }
 
 const { title, desc } = Astro.props;
-const bannerConverted = await getImage({ src: banner });
 ---
 
 <html lang='en'>
@@ -28,8 +27,8 @@ const bannerConverted = await getImage({ src: banner });
     <meta name='og:title' content={title} />
     <meta name='og:description' content={desc} />
     <meta name='og:url' content='https://photography.nevillebrem.com' />
-    <meta name='og:image' content={bannerConverted.src} />
-    <meta name='twitter:image' content={bannerConverted.src} />
+    <meta name='og:image' content={banner.src} />
+    <meta name='twitter:image' content={banner.src} />
     <meta name='twitter:card' content='summary_large_image' />
     <meta name='twitter:title' content={title} />
     <meta name='twitter:description' content={desc} />
