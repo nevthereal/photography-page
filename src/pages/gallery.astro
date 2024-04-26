@@ -3,9 +3,10 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 
 const images = await Astro.glob("@assets/gallery/*.jpg");
+const desc = "Gallery of Neville Brem's photographs";
 ---
 
-<BaseLayout title='Gallery'>
+<BaseLayout title='Gallery' {desc}>
   <h1 class='text-4xl mb-8'>Some favorites stay on my mind forever</h1>
   <div class='flex flex-col md:grid md:grid-cols-2 gap-4'>
     {

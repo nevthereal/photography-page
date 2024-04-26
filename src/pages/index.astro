@@ -4,9 +4,11 @@ import banner from "@assets/hero.jpg";
 import { getImage } from "astro:assets";
 
 const bannerConverted = await getImage({ src: banner });
+
+const desc = "Photography page of Neville Brem";
 ---
 
-<BaseLayout title='Home'>
+<BaseLayout title='Home' {desc}>
   <main>
     <div
       style={`background-image: url('${bannerConverted.src}')`}
