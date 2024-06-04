@@ -14,9 +14,9 @@ const { Content } = await entry.render();
 ---
 
 <BaseLayout title={entry.data.title} desc={entry.data.desc}>
-  <article class='prose'>
+  <article class='prose prose-p:text-base-content mx-auto text-'>
     <h1>{entry.data.title}</h1>
-    <p>{entry.data.desc}</p>
+    <p class='italic'>By {entry.data.author}</p>
     <Content />
   </article>
 </BaseLayout>
