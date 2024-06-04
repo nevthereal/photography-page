@@ -9,9 +9,21 @@ const desc = "What's going on with Neville Brem's photography journey";
 
 <BaseLayout title='Blog' {desc}>
   <h1 class='text-4xl mb-8'>See what I am up to right now</h1>
-  {
-    posts.map((p) => {
-      return <a href={`/blog/${p.slug}`}>{p.data.title}</a>;
-    })
-  }
+
+  <section class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
+    {
+      posts.map((p) => {
+        return (
+          <a href={`/blog/${p.slug}`}>
+            <div class='card border-2 border-gray-600'>
+              <div class='card-body'>
+                <h2 class='card-title'>{p.data.title}</h2>
+                <p>{p.data.desc}</p>
+              </div>
+            </div>
+          </a>
+        );
+      })
+    }
+  </section>
 </BaseLayout>
