@@ -16,7 +16,11 @@ const { Content } = await entry.render();
 <BaseLayout title={entry.data.title} desc={entry.data.desc}>
   <article class='prose prose-p:text-base-content mx-auto text-'>
     <h1>{entry.data.title}</h1>
-    <p class='italic'>By {entry.data.author}</p>
+    <p class='italic'>
+      Published by {entry.data.author} at {
+        entry.data.publishedAt.toLocaleDateString([], { dateStyle: "medium" })
+      }
+    </p>
     <Content />
   </article>
 </BaseLayout>
