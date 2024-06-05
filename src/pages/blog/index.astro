@@ -4,6 +4,12 @@ import { getCollection } from "astro:content";
 
 const posts = await getCollection("blog");
 
+posts.sort(
+  (a, b) =>
+    new Date(b.data.publishedAt).valueOf() -
+    new Date(a.data.publishedAt).valueOf()
+);
+
 const desc = "What's going on with Neville Brem's photography journey";
 ---
 
@@ -17,8 +23,15 @@ const desc = "What's going on with Neville Brem's photography journey";
           <a href={`/blog/${p.slug}`}>
             <div class='card border-2 border-gray-600'>
               <div class='card-body'>
-                <h2 class='card-title'>{p.data.title}</h2>
-                <p>{p.data.desc}</p>
+                <h2 class='text-2xl'>{p.data.title}</h2>
+                <p>
+                  published on
+                  <span class='italic'>
+                    {p.data.publishedAt.toLocaleString([], {
+                      dateStyle: "medium",
+                    })}
+                  </span>
+                </p>
               </div>
             </div>
           </a>
