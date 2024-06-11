@@ -12,13 +12,15 @@ const desc = "Photography page of Neville Brem";
   <main>
     <div
       style={`background-image: url('${bannerConverted.src}')`}
-      class='rounded-lg flex h-[40dvh] w-full flex-col justify-between p-16 bg-cover bg-center'
+      class='rounded-lg flex h-[40dvh] w-full flex-col justify-between p-4 md:p-16 bg-cover bg-center'
     >
       <div>
-        <h1 class='text-5xl font-black'>Fully immersed</h1>
-        <h3 class='text-xl font-bold'>Capturing actions</h3>
+        <h1 class='text-4xl md:text-5xl font-black'>Fully immersed</h1>
+        <h3 class='text-lg md:text-xl font-bold'>Capturing action</h3>
       </div>
-      <a href='/gallery' class='btn btn-primary mx-auto'>Explore the gallery</a>
+      <a href='/gallery' class='btn btn-primary mx-auto mb-4 md:mb-0'
+        >Explore the gallery</a
+      >
     </div>
   </main>
 </BaseLayout>

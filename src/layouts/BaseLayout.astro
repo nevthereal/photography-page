@@ -33,16 +33,18 @@ const { title, desc } = Astro.props;
   </head>
   <body class='prose-headings:font-[Domine] prose-headings:font-bold'>
     <nav class='m-8 flex items-center justify-between font-[Domine]'>
-      <a href='/' class='text-5xl font-black text-primary'>NB</a>
-      <div class='flex gap-8 text-2xl font-bold text-secondary'>
+      <a href='/' class='md:text-5xl text-3xl font-black text-primary'>NB</a>
+      <div class='flex gap-8 md:text-2xl text-xl font-bold text-secondary'>
         <a href='/gallery'>Gallery</a>
         <a href='/blog'>Blog</a>
       </div>
     </nav>
-    <div class='mx-16 2xl:mx-auto 2xl:w-[60%]'>
+    <div class='md:mx-16 mx-8 2xl:mx-auto 2xl:w-[60%]'>
       <slot />
     </div>
-    <footer class='p-16 prose-a:font-bold prose-a:text-primary'>
+    <footer
+      class='md:p-16 p-4 prose-a:font-bold prose-a:text-primary font-[Domine]'
+    >
       <h1 class='text-center text-xl'>© Neville Brem 2024</h1>
       <div class='flex justify-center gap-4'>
         <a href='https://links.nevillebrem.com' target='_blank'>Links</a>
