@@ -18,7 +18,7 @@ const { Content } = await entry.render();
     <h1 class='lg:text-7xl md:text-5xl text-3xl text-balance'>
       {entry.data.title}
     </h1>
-    <p class='italic'>
+    <p class='italic hyphens-auto text-balance' lang='en'>
       Published by {entry.data.author} at {
         entry.data.publishedAt.toLocaleDateString([], { dateStyle: "medium" })
       }
