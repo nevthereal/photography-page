@@ -11,6 +11,7 @@ export default defineConfig({
   adapter: vercel({
     imagesConfig: {
       formats: ["image/webp"],
+      sizes: [640, 750, 828, 1080, 1200],
     },
     imageService: true,
     devImageService: "sharp",
