@@ -8,5 +8,14 @@ import vercel from "@astrojs/vercel/static";
 export default defineConfig({
   integrations: [tailwind(), svelte()],
   output: "static",
-  adapter: vercel(),
+  adapter: vercel({
+    imagesConfig: {
+      formats: ["image/webp"],
+    },
+    imageService: true,
+    devImageService: "sharp",
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });
