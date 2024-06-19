@@ -9,13 +9,6 @@ export default defineConfig({
   integrations: [tailwind(), svelte()],
   output: "static",
   adapter: vercel({
-    imagesConfig: {
-      formats: ["image/webp"],
-      sizes: [640, 750, 828, 1080, 1200],
-      domains: [],
-    },
-    imageService: true,
-    devImageService: "sharp",
     webAnalytics: {
       enabled: true,
     },
