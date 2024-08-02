@@ -2,8 +2,9 @@
 title: "The first post"
 publishedAt: 2024-06-04
 author: "Neville Brem"
-desc: "My first post"
 ---
+
+![The Dutch women's quadruple sculls in Lucerne](../../assets/blog/IMG_4534.jpg)
 
 This is the first post on my website! I don't really know yet what I will write on here, but I am excited.
 I think I'm gonna share some technical things on here and just do some casual posts.
@@ -26,7 +27,7 @@ But I'd like to have a lens that goes more in this sweet telephoto direction. Th
 2. **SIGMA Contemporary 150-600mm F/5.0-6.3 DG OS HSM**
 
 Both are excellent lenses I've heard great stuff about. One of my photography friends own the Sigma one and it shoots great images. I also thought about getting something in the 100-400mm focal range, but one of these is a better fit in my opinion.
-The Canon lens is great for rowing photography over all I think so to get a more wide shot of the boats. For more detailed shots I will eventually upgrade for the Sigma one. Both lenses are currently on my watch list and I am constantly looking out for bang for the buck offers. There is a slight telephoto-dilemma I want to address in a future post though.
+The Canon lens is great for rowing photography over all I think so to get a more wide shot of the boats. For more detailed shots I will eventually upgrade for the Sigma one. Both lenses are currently on my watch list and I am constantly looking out for bang for the buck offers.
 
 Regarding camera bodies, I took the **Canon EOS R8** and the **Canon EOS R6 Mark II** into consideration. They both have the same processor and the same 24.20MP sensor, but the R6 is bigger and has IBIS and a faster burst mode and some other perks. I'll definitely buy an EF-RF lens adapter for the camera, since I plan to keep the lenses I will have 'til then.
 

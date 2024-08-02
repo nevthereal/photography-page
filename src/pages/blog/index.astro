@@ -20,20 +20,19 @@ const desc = "What's going on with Neville Brem's photography journey";
     {
       posts.map((p) => {
         return (
-          <a href={`/blog/${p.slug}`}>
-            <div class='card border-2 border-gray-600'>
-              <div class='card-body'>
-                <h2 class='text-2xl'>{p.data.title}</h2>
-                <p>
-                  published on
-                  <span class='italic'>
-                    {p.data.publishedAt.toLocaleString([], {
-                      dateStyle: "medium",
-                    })}
-                  </span>
-                </p>
-              </div>
-            </div>
+          <a
+            href={`/blog/${p.slug}`}
+            class='p-6 bg-base-200 border-base-300 border-2 rounded-box flex justify-between flex-col gap-2'
+          >
+            <h2 class='text-2xl'>{p.data.title}</h2>
+            <p>
+              published on
+              <span class='italic'>
+                {p.data.publishedAt.toLocaleString([], {
+                  dateStyle: "medium",
+                })}
+              </span>
+            </p>
           </a>
         );
       })
