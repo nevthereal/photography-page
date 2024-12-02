@@ -9,7 +9,5 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [tailwind(), svelte(), mdx()],
   output: "static",
-  adapter: vercel({
-    imageService: true,
-  }),
+  adapter: vercel(),
 });
