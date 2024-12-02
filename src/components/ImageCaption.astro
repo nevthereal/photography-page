@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  image: ImageMetadata;
+  description: string;
+}
+let { image, description } = Astro.props;
+---
+
+<figure>
+  <Image src={image} alt={description} quality="mid" loading="lazy" />
+  <figcaption>{description}</figcaption>
+</figure>

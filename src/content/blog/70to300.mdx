@@ -4,7 +4,11 @@ publishedAt: 2024-08-02
 author: "Neville Brem"
 ---
 
-![A tram in Zurich](../../assets/blog/IMG_7218.jpg)
+import ImageCaption from "@components/ImageCaption.astro";
+import Trams from "@assets/blog/IMG_7218.jpg";
+import Train from "@assets/blog/IMG_7228.jpg";
+
+<ImageCaption description="Tram at Central Station in Zurich" image={Trams} />
 
 For the most part of my photography journey (even back in times where I didn't even have a camera), I wanted a telephoto or telezoom lens. Now I finally got it! And it's amazing!
 
@@ -12,7 +16,7 @@ We are of course talking about the **Canon EF 70-300 F/4-5.6 IS II USM**. It is 
 
 It came this morning in the mail, I unpacked it, smacked it on my 600D body and went shooting some stuff in the afternoon. I just went round shooting a bit in the city, like the photo above. I've also gone trainspotting from a bridge, where I took this photo:
 
-![Train from Negrelli Bridge](../../assets/blog/IMG_7228.jpg)
+<ImageCaption image={Train} description="Train from Negrelli bridge" />
 
 It is actually shot through a fence, which you can't make out because it's to close to me. Just a nice detail in my opinion. What immediately stood out for me were a few things:
 
