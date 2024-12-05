@@ -9,10 +9,4 @@ export default defineConfig({
   integrations: [tailwind(), mdx()],
   output: "static",
   adapter: vercel(),
-  image: {
-    experimentalLayout: "responsive",
-  },
-  experimental: {
-    responsiveImages: true,
-  },
 });
