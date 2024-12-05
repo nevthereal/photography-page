@@ -1,13 +1,19 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
-import vercel from "@astrojs/vercel/static";
+import vercel from "@astrojs/vercel";
 
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), svelte(), mdx()],
+  integrations: [tailwind(), mdx()],
   output: "static",
   adapter: vercel(),
+  image: {
+    experimentalLayout: "responsive",
+  },
+  experimental: {
+    responsiveImages: true,
+  },
 });
