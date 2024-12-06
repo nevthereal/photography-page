@@ -8,5 +8,7 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [tailwind(), mdx()],
   output: "static",
-  adapter: vercel(),
+  adapter: vercel({
+    isr: true,
+  }),
 });
