@@ -8,17 +8,17 @@ const bannerConverted = await getImage({ src: banner });
 const desc = "Photography page of Neville Brem";
 ---
 
-<BaseLayout title='Home' {desc}>
+<BaseLayout title="Home" {desc}>
   <main>
     <div
       style={`background-image: url('${bannerConverted.src}')`}
-      class='rounded-lg flex h-[40dvh] w-full flex-col justify-between p-4 md:p-16 bg-cover bg-center'
+      class="rounded-lg flex h-[40dvh] w-full flex-col justify-between p-4 md:p-16 bg-cover bg-center motion-preset-blur-up motion-duration-500"
     >
       <div>
-        <h1 class='text-4xl md:text-5xl font-black'>Fully immersed</h1>
-        <h3 class='text-lg md:text-xl font-bold'>Capturing action</h3>
+        <h1 class="text-4xl md:text-5xl font-black">Fully immersed</h1>
+        <h3 class="text-lg md:text-xl font-bold">Capturing action</h3>
       </div>
-      <a href='/gallery' class='btn btn-primary mx-auto mb-4 md:mb-0'
+      <a href="/gallery" class="btn btn-primary mx-auto mb-4 md:mb-0"
         >Explore the gallery</a
       >
     </div>
